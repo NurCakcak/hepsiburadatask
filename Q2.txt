@@ -1,0 +1,10 @@
+Çoklu kredi karti ile ödeme islemi tamamlandiktan sonra muhasebe kaydinin olustugu kontrol edilir.
+Ilk kredi karti bilgileri dogru girilmediginde ikinci kredi karti bilgilerinin girilemedigi kontrol edilir.
+Geçersiz kredi karti bilgileri girildiginde "Lütfen geçerli bir kredi karti girin" uyarisi verdigi kontrol edilir.
+"Tutar Girin" alanina ödenecek tutardan fazla miktar girildiginde "Girmis oldugunuz tutar toplam tutarin üzerindedir. Lütfen daha düsük bir tutar giriniz" 
+uyarisi verdigi kontrol edilir.
+"Tutar Girin" alanina ödenecek tutar girildikten sonra kalan tutarin dogru hesaplandigi kontrol edilir.
+1 TL altinda tutar girildignde, "Birinci kart için girilen tutar 1,00 TL'nin altinda olmamali.Lütfen daha yüksek bir tutar giriniz." uyarisi verdigi kontrol edilir.
+"Karti onayla" butonuna tiklandiginda cep telefonuna dogrulama kodunun gönderildigi kontrol edilir.
+"3D secure ile ödemek isityorum" checkbox seçili oldugunda cep telefonuna gönderilen kodun girilmesi beklendigi kontrol edilir.
+"Sonraki Adim" butonu kredi karti bilgileri girsleri tamalandikten sonra aktiflestigi kontrol edilir.

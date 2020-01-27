@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="resources/externalJars"/>
+	<classpathentry excluding="externalJars/" kind="src" path="resources"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry exported="true" kind="lib" path="D:/Users/nmalkaz/workspace/HepsiBuradaSelenium/resources/externalJars/byte-buddy-1.8.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Users/nmalkaz/workspace/HepsiBuradaSelenium/resources/externalJars/client-combined-3.13.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Users/nmalkaz/workspace/HepsiBuradaSelenium/resources/externalJars/client-combined-3.13.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Users/nmalkaz/workspace/HepsiBuradaSelenium/resources/externalJars/commons-codec-1.10.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Users/nmalkaz/workspace/HepsiBuradaSelenium/resources/externalJars/commons-exec-1.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Users/nmalkaz/workspace/HepsiBuradaSelenium/resources/externalJars/commons-logging-1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Users/nmalkaz/workspace/HepsiBuradaSelenium/resources/externalJars/cucumber-core-2.4.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Users/nmalkaz/workspace/HepsiBuradaSelenium/resources/externalJars/cucumber-java-2.4.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Users/nmalkaz/workspace/HepsiBuradaSelenium/resources/externalJars/cucumber-junit-2.4.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Users/nmalkaz/workspace/HepsiBuradaSelenium/resources/externalJars/cucumber-jvm-deps-1.0.6 (1).jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Users/nmalkaz/workspace/HepsiBuradaSelenium/resources/externalJars/gherkin-5.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Users/nmalkaz/workspace/HepsiBuradaSelenium/resources/externalJars/gson-2.8.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Users/nmalkaz/workspace/HepsiBuradaSelenium/resources/externalJars/guava-25.0-jre.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Users/nmalkaz/workspace/HepsiBuradaSelenium/resources/externalJars/httpclient-4.5.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Users/nmalkaz/workspace/HepsiBuradaSelenium/resources/externalJars/httpcore-4.4.9.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Users/nmalkaz/workspace/HepsiBuradaSelenium/resources/externalJars/junit-4.12 (1).jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Users/nmalkaz/workspace/HepsiBuradaSelenium/resources/externalJars/mockito-all-1.10.19.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Users/nmalkaz/workspace/HepsiBuradaSelenium/resources/externalJars/okhttp-3.10.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Users/nmalkaz/workspace/HepsiBuradaSelenium/resources/externalJars/okio-1.14.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

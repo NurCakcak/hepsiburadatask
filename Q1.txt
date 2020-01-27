@@ -1,0 +1,5 @@
+Ayni siparis içinde farkli satici firmalardan ürünler farkli zamanlarda kargolanir.
+"Standart Teslimat" oldugu için ürünün teslim edilecegi gün ve saat araligi siparis esnasinda belirlenir.
+Saticisi Hepsiburada olan ürün olmadigi için verilen siparisdeki mevcut ürünler tedarik ve paketleme süreci sonrasi ayri olarak kargolanir.
+
+

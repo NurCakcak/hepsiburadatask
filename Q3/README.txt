@@ -1,0 +1,1 @@
+Eger proje çalismaz ise classpath lerin update edilmesi gerekmekte!!!!

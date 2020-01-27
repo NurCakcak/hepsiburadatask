@@ -1,0 +1,251 @@
+{
+	"info": {
+		"name": "hepsiburada_swagger",
+		"_postman_id": "7318dec5-31b5-4639-581f-c7912e6019b1",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CREATE_Add a new pet to the store",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c8ff6f68-24cf-4f35-9f80-f02bd11b4bf8",
+						"type": "text/javascript",
+						"exec": [
+							"try",
+							"{",
+							"var jsonData = JSON.parse(responseBody);",
+							"var name = jsonData.name;",
+							"postman.setEnvironmentVariable(\"pet_id\", jsonData.id);",
+							"tests[\"Get Pet Id and petName: \"+environment[\"pet_id\"]+\" Name: \"+name] = responseCode.code === 200;",
+							"",
+							"",
+							"}",
+							"catch(err){}",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d7416896-d09c-4834-abeb-d7b1976de8c7",
+						"type": "text/javascript",
+						"exec": [
+							"//var pet_id = Math.floor(Math.random() * 10000); ",
+							"",
+							"pm.globals.set(\"pet_id\", Math.floor(Math.random() * 10000));"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json, application/xml"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": {{pet_id}},\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"abc\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+				},
+				"url": {
+					"raw": "https://{{lab_url}}/v2/pet",
+					"protocol": "https",
+					"host": [
+						"{{lab_url}}"
+					],
+					"path": [
+						"v2",
+						"pet"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "READ_Find pet by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0d9be1ef-c1ee-4bf1-a14e-a2dbb7e8d449",
+						"type": "text/javascript",
+						"exec": [
+							"try",
+							"{",
+							"var jsonData = JSON.parse(responseBody);",
+							"var name = jsonData.name;",
+							"tests[\"Get Pet Id and petName: \"+environment[\"pet_id\"]+\" Name: \"+name] = responseCode.code === 200;",
+							"}",
+							"catch(err){}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "e87592b3-e1c6-4c9c-9a7e-4cc3274082bb",
+						"type": "text/javascript",
+						"exec": [
+							"pm.globals.get(\"pet_id\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json, application/xml"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://{{lab_url}}/v2/pet/{{pet_id}}",
+					"protocol": "https",
+					"host": [
+						"{{lab_url}}"
+					],
+					"path": [
+						"v2",
+						"pet",
+						"{{pet_id}}"
+					]
+				},
+				"description": "Returns a single pet"
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE_existing pet copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ab70ef5b-968f-4f93-a437-1995584fc540",
+						"type": "text/javascript",
+						"exec": [
+							"try",
+							"{",
+							"var jsonData = JSON.parse(responseBody);",
+							"var name = jsonData.name;",
+							"postman.setEnvironmentVariable(\"pet_id\", jsonData.id);",
+							"tests[\"Updated pet Id : \"+environment[\"pet_id\"]+\" Name: \"+name] = responseCode.code === 200;",
+							"}",
+							"catch(err){}",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "0e7ca7de-a114-4b9f-89bb-56672f4f3c28",
+						"type": "text/javascript",
+						"exec": [
+							"pm.globals.get(\"pet_id\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json, application/xml"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": {{pet_id}},\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"doggie\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+				},
+				"url": {
+					"raw": "https://{{lab_url}}/v2/pet",
+					"protocol": "https",
+					"host": [
+						"{{lab_url}}"
+					],
+					"path": [
+						"v2",
+						"pet"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_ a pet",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9e8be4ff-0a15-463f-ab06-13fe03cb705e",
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "741d2c11-cd78-4db0-acd5-02254255c19c",
+						"type": "text/javascript",
+						"exec": [
+							"pm.globals.get(\"pet_id\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json, application/xml"
+					},
+					{
+						"key": "api_key",
+						"value": "{{api_key}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://{{lab_url}}/v2/pet/{{pet_id}}",
+					"protocol": "https",
+					"host": [
+						"{{lab_url}}"
+					],
+					"path": [
+						"v2",
+						"pet",
+						"{{pet_id}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
